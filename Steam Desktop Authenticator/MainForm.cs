@@ -89,7 +89,7 @@ namespace Steam_Desktop_Authenticator
             loadSettings();
             loadAccountsList();
 
-            checkForUpdates();
+            //checkForUpdates();
 
             if (startSilent)
             {
@@ -592,8 +592,8 @@ namespace Steam_Desktop_Authenticator
                 listAccounts.SelectedIndex = 0;
                 trayAccountList.SelectedIndex = 0;
 
-                listAccounts.Sorted = true;
-                trayAccountList.Sorted = true;
+                //listAccounts.Sorted = true;
+                //trayAccountList.Sorted = true;
             }
             menuDeactivateAuthenticator.Enabled = btnTradeConfirmations.Enabled = allAccounts.Length > 0;
         }
@@ -647,7 +647,7 @@ namespace Steam_Desktop_Authenticator
             }
             else
             {
-                return f.Contains(txtAccSearch.Text);
+                return f.Contains(txtAccSearch.Text.ToLower());
             }
         }
 
